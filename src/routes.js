@@ -1,6 +1,6 @@
 const express = require('express');
 const routes = express.Router();
 
-routes.get('/', (req, res) => res.send('book collection'));
+routes.get('/', (req, res) => res.render('user/create'));
 
 module.exports = routes;

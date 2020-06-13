@@ -1,0 +1,39 @@
+{% extends 'App.njk' %}
+
+{% block head %}
+  <link rel="stylesheet" href="/CSS/userCreate.css">
+{% endblock head %}
+
+{% block content %}
+  <main>
+    <section class="imgRegister">
+    </section>
+    <form action="">
+      <fieldset>
+
+        <legend>
+          <h2>Cadastro de usuário</h2>
+        </legend>
+
+        <div class="fieldGroup">
+
+          <div class="field">
+            <input type="text" name="name" placeholder="Nome">
+          </div>
+
+          <div class="field">
+            <input type="email" name="email" placeholder="E-mail">
+          </div>
+
+          <div class="field">
+            <input type="number" name="cpf" placeholder="CPF">
+          </div>
+
+          <button>Cadastar</button>
+
+        </div>
+
+      </fieldset>
+    </form>
+  </main>
+{% endblock content %}

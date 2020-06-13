@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Basic:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root{
+  --color--blood1: #D36163;
+  --color--blood2: #EA1010;
+  --color--blood3: #B10C0D;
+  --color--grey1: #f5f5f5;
+  --color--grey2: #A09F9F;
+  --color--grey3: #616161;
+  --color--black: #0F0F0F;
+}
+*{
+  padding: 0;
+  margin: 0;
+  border: 0;
+  font-family: 'Gentium Book Basic', serif;
+}
+body{
+  background-color: var(--color--grey3);
+  color: var(--color--black);
+}
+a{
+ text-decoration: none;
+ color: var(--color--grey1); 
+}
