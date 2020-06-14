@@ -30,7 +30,7 @@ form{
   flex: 1;
   flex-direction: column;
 
-  justify-content: end;
+  align-items: center;
 }
 form legend h2{
   margin-top: 64px;
@@ -65,8 +65,14 @@ form .field input::placeholder{
 }
 .fieldGroup button{
   max-width: 300px;
-  color: var(--color--grey1);
-  background-color: var(--color--blood1);
+  width: 200px;
+  color: var(--color--blood1);
+  background-color: var(--color--grey1);
   height: 32px;
   border-radius: 2px;
+  font-size: 16px;
+}
+.fieldGroup a{
+  margin-top: 16px;
+  font-size: 14px;
 }

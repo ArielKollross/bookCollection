@@ -7,6 +7,7 @@ const app = express();
 const url = "localhost";
 const port = 3333;
 
+app.use(express.urlencoded({ extended: true}));
 app.use(express.static('public'));
 app.use(routes);
 

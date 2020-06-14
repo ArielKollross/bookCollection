@@ -1,0 +1,16 @@
+table{
+  background-color: var(--color--grey1);
+  border-spacing: 0;
+  padding: 32px;
+  width: 100%;
+}
+main td, th {
+  padding: 16px;
+  border-bottom: 1px solid var(--color--grey3);
+  text-align: center;
+  color: var(--color--grey3);
+}
+th{
+  color: var(--color--blood1);
+  font-size: 18px;
+}

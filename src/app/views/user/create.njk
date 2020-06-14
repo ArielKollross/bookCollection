@@ -8,7 +8,7 @@
   <main>
     <section class="imgRegister">
     </section>
-    <form action="">
+    <form action="/user" method="POST">
       <fieldset>
 
         <legend>
@@ -18,18 +18,20 @@
         <div class="fieldGroup">
 
           <div class="field">
-            <input type="text" name="name" placeholder="Nome">
+            <input type="text" name="name" placeholder="Nome" required>
           </div>
 
           <div class="field">
-            <input type="email" name="email" placeholder="E-mail">
+            <input type="email" name="email" placeholder="E-mail" required>
           </div>
 
           <div class="field">
-            <input type="number" name="cpf" placeholder="CPF">
+            <input type="number" name="cpf" placeholder="CPF" required>
           </div>
 
-          <button>Cadastar</button>
+          <button type="submit">Cadastar</button>
+
+          <a href="/books">Já tenho cadastro!</a>
 
         </div>
 
