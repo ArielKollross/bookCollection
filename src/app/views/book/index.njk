@@ -6,7 +6,7 @@
 
 {% block content %}
   <main>
-    <a href="#">Novo livro</a>
+    <a href="/livros/cadastro">Novo livro</a>
 
     <table>
       <thead>
@@ -18,13 +18,15 @@
       </thead>
 
       <tbody>
-          <tr>
-            <td>Harry potter</td>
-            <td>Harry potter</td>
-            <td>Harry potter</td>
-            <td>Harry potter</td>
-            <td>Harry potter</td>
-          </tr>
+            {% for book in books %}
+              <tr>
+                <td>{{book.title}}</td>
+                <td>{{book.author}}</td>
+                <td>{{book.read}}</td>
+                <td>{{book.borrowed}}</td>
+                <td><a href="/livros/{{book.id}}">Editar</a></td>
+              </tr>
+            {% endfor %}
       </tbody>
     </table>
   </main>

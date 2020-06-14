@@ -1,0 +1,53 @@
+{% extends 'App.njk' %}
+
+{% block head %}
+  <link rel="stylesheet" href="/CSS/newbook.css">
+{% endblock head %}
+
+{% block content %}
+  <main>
+    <section class="imgRegister">
+    </section>
+    <form action="/livros" method="POST">
+      <fieldset>
+
+        <legend>
+          <h2>Novo livro</h2>
+        </legend>
+
+        <div class="fieldGroup">
+
+          <div class="field">
+            <input type="text" name="title" placeholder="Título" required>
+          </div>
+
+          <div class="field">
+            <input type="text" name="author" placeholder="Autor(a)">
+          </div>
+
+          <div class="field">
+          <label for="">Lido?</label>
+            <select name="read" id="">
+              <option value="true">sim</option>
+              <option value="false">não</option>
+            </select>
+          </div>
+
+          <div class="field">
+          <label for="">Emprestado?</label>
+            <select name="borrowed" id="">
+              <option value="true">sim</option>
+              <option value="false">não</option>
+            </select>
+          </div>
+
+          <button type="submit">Cadastar</button>
+
+          <a href="/livros">Voltar</a>
+
+        </div>
+
+      </fieldset>
+    </form>
+  </main>
+{% endblock content %}

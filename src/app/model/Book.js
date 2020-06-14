@@ -17,11 +17,13 @@ module.exports = {
       data.title,
       data.author,
       Boolean(data.read),
-      Boolean(data.borroed)
+      Boolean(data.borrowed)
     ];
 
-    db.query(query, values, (err, results))
+    db.query(query, values, (err, results) => {
+      if(err) throw `Error to create new book: ${err}`;
+    });
 
-    data.callback();
+    callback();
   }
 }
