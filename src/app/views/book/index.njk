@@ -2,32 +2,52 @@
 
 {% block head %}
   <link rel="stylesheet" href="/CSS/booksTable.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 {% endblock head %}
 
 {% block content %}
   <main>
-    <a href="/livros/cadastro">Novo livro</a>
+
+    <nav>
+      <div class="userNav">
+        <a href="#"></a>
+      </div>
+      <div class="bookNav">
+        <a href="/livros/cadastro">Novo livro</a>
+      </div>
+    </nav>
 
     <table>
       <thead>
         <th>Título</th>
         <th>Autor</th>
         <th>status</th>
+        <th>Lido em</th>
         <th>emprestado</th>
-        <th>Informações</th>
       </thead>
 
       <tbody>
-            {% for book in books %}
-              <tr>
-                <td>{{book.title}}</td>
-                <td>{{book.author}}</td>
-                <td>{{book.read}}</td>
-                <td>{{book.borrowed}}</td>
-                <td><a href="/livros/{{book.id}}">Editar</a></td>
-              </tr>
-            {% endfor %}
+        {% for book in books %}
+          <tr>
+            <td>
+              <span class="material-icons" onclick="edit({{book.id}})">
+                edit
+              </span>
+              {{book.title}}
+            </td>
+            <td>{{book.author}}</td>
+            <td>{{ "Lido" if book.read == "yes" else "Não lido" }}</td>
+            <td>{{book.readIn}}</td>
+            <td>{{"Sim" if bood.borrowed == "yes" else "Não" }}</td>
+          </tr>
+        {% endfor %}
       </tbody>
     </table>
   </main>
+
+  <script>
+    funtion edit(id) {
+
+    }
+  </script>
 {% endblock content %}

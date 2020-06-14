@@ -2,12 +2,12 @@
 
 {% block head %}
   <link rel="stylesheet" href="/CSS/newbook.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 {% endblock head %}
 
 {% block content %}
   <main>
-    <section class="imgRegister">
-    </section>
+    <section class="imgRegister"></section>
     <form action="/livros" method="POST">
       <fieldset>
 
@@ -18,32 +18,46 @@
         <div class="fieldGroup">
 
           <div class="field">
-            <input type="text" name="title" placeholder="Título" required>
+            <input type="text" name="title" placeholder="Título" required="required">
           </div>
 
           <div class="field">
             <input type="text" name="author" placeholder="Autor(a)">
           </div>
 
-          <div class="field">
-          <label for="">Lido?</label>
-            <select name="read" id="">
-              <option value="true">sim</option>
-              <option value="false">não</option>
-            </select>
+          <div class="readIn">
+
+            <div class="field">
+              <label for="">Lido?</label>
+              <div>
+                <span class="radioInput"><input type="radio" name="read" value="yes" checked="checked">Sim</span>
+                <span class="radioInput"><input type="radio" name="read" value="no">Não</span>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="">Lido no ano de</label>
+              <input type="number" name="readIn" min="1910">
+            </div>
+
           </div>
 
           <div class="field">
-          <label for="">Emprestado?</label>
-            <select name="borrowed" id="">
-              <option value="true">sim</option>
-              <option value="false">não</option>
-            </select>
+            <label for="">Emprestado?</label>
+            <div>
+              <span class="radioInput"><input type="radio" name="borrowed" value="no" checked="checked">Não</span>
+              <span class="radioInput"><input type="radio" name="borrowed" value="yes">Sim</span>
+            </div>
           </div>
 
           <button type="submit">Cadastar</button>
 
-          <a href="/livros">Voltar</a>
+          <div class="field">
+            <span class="material-icons">
+              arrow_back
+            </span>
+            <a href="/livros">Voltar</a>
+          </div>
 
         </div>
 

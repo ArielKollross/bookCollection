@@ -1,29 +1,77 @@
 form {
-  background-color: var(--color--grey1);
-  color: var(--color--grey3);
+  background-color: var(--bg--black1);
+  color: var(--color--grey1);
 }
 form fieldset{
-  margin: 0 auto;
+max-width: 500px;
+width: 100%;
+margin: 64px auto;
 }
 form legend h2{
   font-size: 32px;
-  color: var(--color--grey3);
+  color: var(--color--blood3);
   margin-bottom: 24px;
 }
-form input, select, label, button{
-  padding: 8px;
-  margin: 8px;
-  background-color: var(--color--grey1);
+form .field{
+  margin-bottom: 12px;
+  box-sizing: border-box;
 }
-form input{
+form input, select, label, button{
+  padding: 8px 0px;
+  margin: 8px 0px;
+  background-color: transparent;
+}
+form input, button, select{
   font-size: 18px;
-  width: 350px;
-  border-bottom: solid 1px var(--color--grey3);
+  width: 100%;
+  max-width: 400px;
+
+  /* -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none; */
+
+  /* border: none; */
+  
+  /* outline: none; */
+}
+form select{
+  width: 60px;
+  text-align: center;
+}
+form .readIn{
+  display: grid;
+  grid-template-columns: repeat(2, fr);
+}
+form input[type="text"], input[type="number"]{
+  border-bottom: solid 1.2px var(--color--grey1);
+}
+form input::placeholder{
+  color: var(--color--grey1);
 }
 form button{
-  background-color: var(--color--blood1);
+  background-color: var(--color--blood3);
   border-radius: 2px;
   color: var(--color--grey1);
   width: 180px;
   height: 45px;
+}
+.radioInput{
+  padding: 4px 8px;
+  background-color: var(--color--blood3);
+  border-radius: 4px;
+  color: var(--color--grey1);
+  margin-right: 4px;
+  margin-top: 8px;
+  display: inline-block;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+input[type="radio"]{
+  width: initial;
+  margin: 2px;
+}
+form a{
+  margin: 8px;
+  color: var(--color--blood3);
 }

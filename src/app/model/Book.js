@@ -16,8 +16,8 @@ module.exports = {
     const values = [
       data.title,
       data.author,
-      Boolean(data.read),
-      Boolean(data.borrowed)
+      data.read,
+      data.borrowed
     ];
 
     db.query(query, values, (err, results) => {
